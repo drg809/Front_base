@@ -1,0 +1,21 @@
+<div class="container">
+  <form class="form-hotizontal" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+    <div class="form-group">
+      <label>Nombre: </label>
+      <input type="text" class="form-control" required [(ngModel)]="userForm.name" name="name" #name="ngModel">
+    </div>
+    <div class="form-group">
+      <label>Email: </label>
+      <input type="text" class="form-control" required [(ngModel)]="userForm.email" name="email" #email="ngModel">
+    </div>
+    <div class="form-group">
+      <label>Contraseña: </label>
+      <input type="password" class="form-control" required [(ngModel)]="userForm.password" name="password" #password="ngModel">
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary mr-4" type="submit" [disabled]="!userForm.valid">
+        Guardar
+      </button>
+    </div>
+  </form>
+</div>
