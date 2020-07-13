@@ -32,9 +32,9 @@ export function tokenGetter() {
       config: {
         // throwNoTokenError: true,
         tokenGetter: tokenGetter,
-        whitelistedDomains: [environment.api_url_sin_protocolo],
+        allowedDomains: [environment.api_url_sin_protocolo],
         // blacklistedRoutes son rutas que no queremos inyectar el bearer token
-        blacklistedRoutes: [
+        disallowedRoutes: [
           environment.api_url_sin_protocolo + '/login/',
           environment.api_url_sin_protocolo + '/sendResetLinkEmail',
         ],
